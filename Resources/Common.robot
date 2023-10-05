@@ -2,7 +2,7 @@
 Library  AppiumLibrary
 *** Variables ***
 ${username}      anubhas
-${accesskey}     accesskey
+${accesskey}     JvGShZ2Bm8RdgmGFbbx4ZtbOb6DeQ8nqSvtHDZdDY7PzqaZMTq
 ${REMOTE_URL}      https://${username}:${accesskey}@mobile-hub.lambdatest.com/wd/hub
 ${TIMEOUT}          3000
 *** Keywords ***
