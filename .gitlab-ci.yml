@@ -1,0 +1,25 @@
+image: python:3.8
+
+stages:
+  - test
+
+variables:
+  # Define your environment variables here
+  GITHUB_REPO_URL: "https://github.com/Anubha1998/Appium-Robot.git"
+  GITHUB_REPO_BRANCH: "main"
+  LAMBDATEST_USERNAME: "anubhas"
+  LAMBDATEST_ACCESS_KEY: "JvGShZ2Bm8RdgmGFbbx4ZtbOb6DeQ8nqSvtHDZdDY7PzqaZMTq"
+
+before_script:
+  - pip install robotframework
+  - pip install robotframework-appiumlibrary
+  - pip install robotframework-seleniumlibrary
+
+test:
+  stage: test
+  script:
+    - git clone $GITHUB_REPO_URL -b $GITHUB_REPO_BRANCH
+    - cd Appium-Robot
+    - robot Tests/Android.robot
+  tags:
+    - your_ci_runner_tag
